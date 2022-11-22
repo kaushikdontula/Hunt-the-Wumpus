@@ -1,0 +1,71 @@
+/******************************************************************* ** 
+** Program: pit.cpp
+** Author: Kaushik Dontula
+** Date: 10/23/2022
+** Description: This program creates the class player
+** Input: all class files
+** Output: card player 
+*******************************************************************/
+
+#include <iostream>
+#include <iomanip>
+#include <cstdlib>
+#include <cmath>
+#include <sstream>
+#include <cstring>
+#include <string>
+
+#include "pit.h"
+
+using namespace std;
+
+Pit::Pit(){
+    adjacent = "You feel a breeze in an adjacent room... ";
+    in_room = "You fell in a bottomless pit, you die... "; 
+    output = 'P';
+}
+
+
+
+
+/******************************************************************* 
+** Function: get_symbol
+** Description: this returns a symbol from the member variables
+** Parameters: none 
+** Pre-conditions: member variable
+** Post-conditions: returns the symbol type
+*******************************************************************/
+char Pit::get_symbool(){
+    return output;
+}
+
+
+
+/******************************************************************* 
+** Function: get_adjacent
+** Description: constant function that returns the string member variable for get adjacent
+** Parameters: none 
+** Pre-conditions: member variable for adjacent
+** Post-conditions: returns the string percept
+*******************************************************************/
+string Pit::get_adjacent() const{
+    return adjacent;
+}
+
+
+
+/******************************************************************* 
+** Function: get_in_room
+** Description: constant function that returns the string member variable for get_in_room
+** Parameters: none 
+** Pre-conditions: member variable for in_room
+** Post-conditions: returns the string percept
+*******************************************************************/
+string Pit::get_in_room() const{
+    return in_room;
+}
+
+Pit::~Pit(){
+    cout << "Inside pit destructor..." << endl;
+}
+
